@@ -16,7 +16,7 @@ module.exports = {
   website: {
     assets: './assets',
     css: [
-      'numbered-headings-website.css'
+      // 'numbered-headings-website.css'
     ]
   },
   ebook: {
@@ -53,18 +53,18 @@ module.exports = {
           h1 = h1 + 1;
           h2 = 0;
           h3 = 0;
-          $(h).prepend('<span class="number-for-pdf">' + h1 + '. </span>');
+          $(h).prepend('<span class="chapter number-for-pdf">' + h1 + '. </span>');
         }
         else if (tagName == 'h2')
         {
           h2 = h2 + 1;
           h3 = 0;
-          $(h).prepend('<span class="number-for-pdf">' + h1 +  '.' + h2 + '. </span>');
+          $(h).prepend('<span class="chapter number-for-pdf">' + h1 +  '.' + h2 + '. </span>');
         }
         else if (tagName == 'h3')
         {
           h3 = h3 + 1;
-          $(h).prepend('<span class="number-for-pdf">' + h1 +  '.' + h2 + '.' + h3 + '. </span>');
+          $(h).prepend('<span class="chapter number-for-pdf">' + h1 +  '.' + h2 + '.' + h3 + '. </span>');
         }
       });
       page.content = $.html();
